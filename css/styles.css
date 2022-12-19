@@ -38,6 +38,7 @@ img {
 .container {
     max-width: 1158px;
     margin-left: auto;
+
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -48,7 +49,7 @@ img {
     padding-top: 120px;
     padding-bottom: 120px;
 }
-.section-header {
+.section-header.portfolio {
     border-bottom: 2px solid var(--light-cloud);
 }
 .nav {
@@ -89,17 +90,22 @@ img {
 }
 .site-nav {
     display: flex;
+    align-items: center;
+    
     
 }.site-nav .item:not(:last-child) {
     margin-right: 40px;
 }
 .link-nav {
     display: block;
+
     color: var(--navy-biue);
     font-weight: 600;
     text-decoration: none;
+
     padding-top: 24px;
     padding-bottom: 24px;
+
     transition: color var(--time-distribution);
 }
 .link-nav:hover {
@@ -108,13 +114,21 @@ img {
 .link-nav:focus {
     color: var(--primary-brand);
 }
+.link-nav.studio {
+    color: var(--primary-brand);
+}
+.link-nav.portfolio {
+    color: var(--primary-brand);
+}
 .item.after::after {
     content:'';
 
     display: block;
     width: 100%;
     height: 4px;
+
     border-radius: 2px;
+
     background-color: var(--primary-brand);
 }
 .contact {
@@ -133,7 +147,6 @@ img {
 .primary-contact:hover,
 .primary-contact:focus {
     color: var(--primary-brand);
-    fill: var(--primary-brand);
 }
 .contact .item + .item {
     margin-left: 40px;
@@ -145,6 +158,7 @@ img {
 }
 .icon-header {
     margin-right: 12px;
+    fill: currentColor;
 }
 .hero {
     color: var(--white);
@@ -157,8 +171,8 @@ img {
 .section-hero {
     background-color: var(--navy-biue);
     background-image: linear-gradient(to right,
-     rgba(46, 47, 66, 0.8),
-     rgba(46, 47, 66, 0.8)),
+     rgba(46, 47, 66, 0.7),
+     rgba(46, 47, 66, 0.7)),
      url(../images/people-office.jpg);
     padding-top: 192px;
     padding-bottom: 192px;
@@ -445,6 +459,7 @@ img {
 .button.btn:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
+
 .overlei {
     position: absolute;
     top: 0;
@@ -480,11 +495,17 @@ img {
     margin-left: 24px;
     margin-top: 48px;
 }
-.card-portfolio:hover .overlei {
+.card-portfolio:hover .overlei,
+.card-portfolio:focus .overlei {
     transform: translate(0, 0);
 }
+
 .portfolio-unit {
+    display: block;
+
     border: 0.5px solid var(--light-cloud);
+    text-decoration: none;
+
 }
 .portfolio-unit:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -498,6 +519,10 @@ img {
 .subtitle-text {
     display: flex;
     justify-content: flex-start;
+
+   
+    font-family: 'Roboto', sans-serif;
+    color: var(--body-text);
 }
 .buttons {
     display: flex;
